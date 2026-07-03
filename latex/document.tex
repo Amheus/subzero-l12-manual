@@ -20,8 +20,87 @@
 	\tableofcontents
 	\clearpage
 	
+	
+	
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\pagebreak
+	\section{Safety}
+	
+	
+	
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\pagebreak
+	\section{Introduction}
+	
+	
+	
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\pagebreak
 	\section{Physical Functions}
 	\includegraphics[width=\textwidth]{l12-top-panel.png}
-
+	
+	
+	
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\pagebreak
+	\section{Operation}
+	
+	
+	
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\pagebreak
+	\section{The DSP menu}
+	\dspmenu
+	
+	\subsection{Mic EQ}
+	The Mic EQ offers five adjustable bands:
+	\eqbandtable
+	
+	\section{Front-panel controls}
+	\controlsref
+	
+	
+	
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\pagebreak
+	\section{DSP Modes}
+	The onboard DSP offers four voicings. Each applies a different
+	frequency-response shape, summarised below.
+	
+	\begin{note}
+		The curve show the intended frequency curve.
+		Exact response varies with a variety of factors including room, level, and placement.
+	\end{note}
+	
+	\newcommand{\dspmode}[1]{%
+		\subsection{\dsplabel{#1}}%
+		\dspgraph{#1}%
+	}
+	
+	\subsection{\dsplabel{flat}}
+	\dspgraph{flat}
+	
+	\dspmode{music}
+	\dspmode{live}
+	\dspmode{speech}
+	
+	\subsection{\dsplabel{eq5}}
+	
+	
+	
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
