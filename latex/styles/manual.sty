@@ -1,0 +1,364 @@
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{manual}[2026/06/27 v1.0 Open-source equipment manual style]
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% OPTIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DeclareOption*{\PackageWarning{manual}{Unknown option '\CurrentOption'}}
+\ProcessOptions\relax
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DEPENDENCIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{iftex}
+\ifPDFTeX
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\fi
+\RequirePackage[a4paper,margin=2.4cm,headheight=15pt,footskip=1.1cm]{geometry}
+\RequirePackage[table]{xcolor}
+\RequirePackage{graphicx}
+\IfFileExists{atkinson.sty}{%
+	\RequirePackage[sfdefault]{atkinson}%
+}{%
+	\RequirePackage{helvet}%
+	\renewcommand{\familydefault}{\sfdefault}%
+	\PackageWarning{manual}{Package 'atkinson' not found; falling back to
+		Helvetica. Install the 'atkinson' package (2025-03 or later) for
+		Atkinson Hyperlegible Next.}%
+}
+\RequirePackage{microtype}
+\RequirePackage{enumitem}
+\RequirePackage{booktabs}
+\RequirePackage{tabularx}
+\RequirePackage{array}
+\RequirePackage{environ}
+\RequirePackage{titlesec}
+\RequirePackage{fancyhdr}
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{caption}
+\RequirePackage{lastpage}
+\RequirePackage[hidelinks]{hyperref}
+
+\newif\if@manual@icons \@manual@iconsfalse
+\IfFileExists{fontawesome5.sty}{%
+	\RequirePackage{fontawesome5}\@manual@iconstrue
+}{}
+\newcommand{\manual@icon}[2]{\if@manual@icons#1\else#2\fi}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COLOURS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{manualaccent}{HTML}{0A5C9E}
+\colorlet{manualaccentdark}{manualaccent!75!black}
+\colorlet{manualaccentpale}{manualaccent!8!white}
+\definecolor{manualink}{HTML}{1A1A1A}
+\definecolor{manualgrey}{HTML}{6B7280}
+\definecolor{manualrule}{HTML}{D6DBE1}
+
+\definecolor{admonition@danger}{HTML}{C53030}
+\definecolor{admonition@warning}{HTML}{DD7A06}
+\definecolor{admonition@caution}{HTML}{B7791F}
+\definecolor{admonition@note}{HTML}{2B6CB0}
+\definecolor{admonition@tip}{HTML}{2F855A}
+
+\color{manualink}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=manualaccentdark,
+	urlcolor=manualaccentdark,
+	citecolor=manualaccentdark,
+	pdfborderstyle={/S/U/W 0}
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% METADATA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\manual@product}{Product Name}
+\newcommand{\manual@model}{Model}
+\newcommand{\manual@tagline}{}
+\newcommand{\manual@version}{0.1}
+\newcommand{\manual@author}{}
+\newcommand{\manual@licence}{}
+
+\newcommand{\manualproduct}[1]{\renewcommand{\manual@product}{#1}}
+\newcommand{\manualmodel}[1]{\renewcommand{\manual@model}{#1}}
+\newcommand{\manualtagline}[1]{\renewcommand{\manual@tagline}{#1}}
+\newcommand{\manualversion}[1]{\renewcommand{\manual@version}{#1}}
+\newcommand{\manualauthor}[1]{\renewcommand{\manual@author}{#1}}
+\newcommand{\manuallicence}[1]{\renewcommand{\manual@licence}{#1}}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ELEMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PARAGRAPHS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em plus 0.1em}
+\linespread{1.05}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADINGS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\section}
+{\sffamily\Large\bfseries\color{manualaccent}}
+{\thesection}{0.7em}{}
+[\vspace{2pt}{\color{manualaccent}\titlerule[1.1pt]}]
+\titlespacing*{\section}{0pt}{2.4ex plus .8ex}{1.2ex}
+
+\titleformat{\subsection}
+{\sffamily\large\bfseries\color{manualaccentdark}}
+{\thesubsection}{0.6em}{}
+\titlespacing*{\subsection}{0pt}{2.0ex plus .6ex}{0.8ex}
+
+\titleformat{\subsubsection}
+{\sffamily\normalsize\bfseries\color{manualink}}
+{\thesubsubsection}{0.6em}{}
+\titlespacing*{\subsubsection}{0pt}{1.6ex plus .5ex}{0.6ex}
+
+\@ifundefined{chapter}{}{%
+	\titleformat{\chapter}[display]
+	{\sffamily\bfseries\color{manualaccent}}
+	{\fontsize{14}{16}\selectfont\MakeUppercase{\chaptertitlename}\ \thechapter}
+	{6pt}{\Huge}
+	[\vspace{4pt}{\color{manualaccent}\titlerule[1.4pt]}]
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER / FOOTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{manualrule}\leaders\hrule height \headrulewidth\hfill}}
+\fancyhead[L]{\small\color{manualaccentdark}\textbf{\manual@product}\ \textcolor{manualgrey}{\manual@model}}
+\fancyhead[R]{\small\color{manualgrey}\nouppercase{\leftmark}}
+\fancyfoot[L]{\small\color{manualgrey}v\manual@version}
+\fancyfoot[R]{\small\color{manualgrey}Page \thepage\ of \pageref*{LastPage}}
+
+\fancypagestyle{plain}{%
+	\fancyhf{}\renewcommand{\headrulewidth}{0pt}%
+	\fancyfoot[R]{\small\color{manualgrey}Page \thepage\ of \pageref*{LastPage}}%
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CAPTIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\captionsetup{
+	font={small,color=manualink},
+	labelfont={bf,color=manualaccentdark},
+	labelsep=period,
+	skip=6pt
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TITLE PAGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\manualtitlepage}{%
+	\begin{titlepage}
+		\thispagestyle{empty}
+		\raggedright
+		\vspace*{1.2cm}
+		{\color{manualaccent}\rule{\linewidth}{2.2pt}}\par
+		\vspace{1.0cm}
+		{\sffamily\fontsize{15}{18}\selectfont\color{manualgrey}%
+			USER MANUAL \quad\textbar\quad MODEL \manual@model}\par
+		\vspace{0.5cm}
+		{\sffamily\fontsize{46}{50}\selectfont\bfseries\color{manualink}\manual@product}\par
+		\ifx\manual@tagline\empty\else
+		\vspace{0.5cm}
+		{\sffamily\Large\color{manualaccentdark}\manual@tagline}\par
+		\fi
+		\vspace{0.8cm}
+		{\color{manualaccent}\rule{\linewidth}{2.2pt}}\par
+		\vfill
+		\begin{description}[font=\bfseries\color{manualaccentdark},
+			leftmargin=0pt,labelsep=0.8em,itemsep=2pt]
+			\ifx\manual@version\empty\else\item[Version]\manual@version\fi
+			\ifx\manual@author\empty\else\item[Maintained by]\manual@author\fi
+			\ifx\manual@licence\empty\else\item[Licence]\manual@licence\fi
+		\end{description}
+		\vspace{0.6cm}
+		{\small\color{manualgrey}This is an independent, community-maintained
+			manual and is not affiliated with or endorsed by the manufacturer.\par}
+	\end{titlepage}%
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ADMONITION BOXES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtcolorbox{danger}{enhanced,breakable,left=11mm,right=3mm,top=2.6mm,
+	bottom=2.6mm,boxrule=0pt,leftrule=3pt,arc=1.4mm,outer arc=1.4mm,
+	colback=admonition@danger!7,colframe=admonition@danger,
+	fonttitle=\sffamily\bfseries\small,coltitle=admonition@danger!80!black,
+	title={DANGER},attach boxed title to top left={xshift=11mm,yshift=-2pt},
+	boxed title style={colback=white,boxrule=0pt},
+	overlay unbroken and first={\node[anchor=center,text=admonition@danger]
+		at ([xshift=5.5mm]frame.west){%
+			\manual@icon{\faSkull}{\textbf{!!}}};}}
+
+\newtcolorbox{warning}{enhanced,breakable,left=11mm,right=3mm,top=2.6mm,
+	bottom=2.6mm,boxrule=0pt,leftrule=3pt,arc=1.4mm,outer arc=1.4mm,
+	colback=admonition@warning!8,colframe=admonition@warning,
+	fonttitle=\sffamily\bfseries\small,coltitle=admonition@warning!80!black,
+	title={WARNING},attach boxed title to top left={xshift=11mm,yshift=-2pt},
+	boxed title style={colback=white,boxrule=0pt},
+	overlay unbroken and first={\node[anchor=center,text=admonition@warning]
+		at ([xshift=5.5mm]frame.west){%
+			\manual@icon{\faExclamationTriangle}{\textbf{!}}};}}
+
+\newtcolorbox{caution}{enhanced,breakable,left=11mm,right=3mm,top=2.6mm,
+	bottom=2.6mm,boxrule=0pt,leftrule=3pt,arc=1.4mm,outer arc=1.4mm,
+	colback=admonition@caution!9,colframe=admonition@caution,
+	fonttitle=\sffamily\bfseries\small,coltitle=admonition@caution!75!black,
+	title={CAUTION},attach boxed title to top left={xshift=11mm,yshift=-2pt},
+	boxed title style={colback=white,boxrule=0pt},
+	overlay unbroken and first={\node[anchor=center,text=admonition@caution]
+		at ([xshift=5.5mm]frame.west){%
+			\manual@icon{\faExclamationCircle}{\textbf{!}}};}}
+
+\newtcolorbox{note}{enhanced,breakable,left=11mm,right=3mm,top=2.6mm,
+	bottom=2.6mm,boxrule=0pt,leftrule=3pt,arc=1.4mm,outer arc=1.4mm,
+	colback=admonition@note!7,colframe=admonition@note,
+	fonttitle=\sffamily\bfseries\small,coltitle=admonition@note!80!black,
+	title={NOTE},attach boxed title to top left={xshift=11mm,yshift=-2pt},
+	boxed title style={colback=white,boxrule=0pt},
+	overlay unbroken and first={\node[anchor=center,text=admonition@note]
+		at ([xshift=5.5mm]frame.west){%
+			\manual@icon{\faInfoCircle}{\textbf{i}}};}}
+
+\newtcolorbox{tip}{enhanced,breakable,left=11mm,right=3mm,top=2.6mm,
+	bottom=2.6mm,boxrule=0pt,leftrule=3pt,arc=1.4mm,outer arc=1.4mm,
+	colback=admonition@tip!7,colframe=admonition@tip,
+	fonttitle=\sffamily\bfseries\small,coltitle=admonition@tip!80!black,
+	title={TIP},attach boxed title to top left={xshift=11mm,yshift=-2pt},
+	boxed title style={colback=white,boxrule=0pt},
+	overlay unbroken and first={\node[anchor=center,text=admonition@tip]
+		at ([xshift=5.5mm]frame.west){%
+			\manual@icon{\faLightbulb}{\textbf{*}}};}}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NUMBERED PROCEDURE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\manual@steptoken}[1]{%
+	\tcbox[on line,boxsep=0pt,left=2.2mm,right=2.2mm,top=0.8mm,bottom=0.8mm,
+	arc=1mm,colback=manualaccent,colframe=manualaccent,
+	fontupper=\sffamily\bfseries\small\color{white}]{#1}}
+\newlist{steps}{enumerate}{1}
+\setlist[steps]{label={\protect\manual@steptoken{\arabic*}},
+	leftmargin=*,labelsep=0.8em,itemsep=0.6em,topsep=0.5em,
+	before=\setlength{\parskip}{0.2em}}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INLINE CONTROL REFERENCE
+% For referring to a physical knob/port on the L12.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\control}[1]{%
+	\tcbox[on line,boxsep=0pt,left=1.4mm,right=1.4mm,top=0.4mm,bottom=0.4mm,
+	arc=0.6mm,colback=manualaccentpale,colframe=manualaccent!40,
+	boxrule=0.5pt,fontupper=\sffamily\bfseries\footnotesize\color{manualaccentdark}]%
+	{\MakeUppercase{#1}}}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INLINE CONNECTOR/PORT REFERENCE
+% For referring to a connector/port on the L12, visually distinct from a control.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\port}[1]{%
+	\tcbox[on line,boxsep=0pt,left=1.4mm,right=1.4mm,top=0.4mm,bottom=0.4mm,
+	arc=0.6mm,colback=manualink!4,colframe=manualink!30,
+	boxrule=0.5pt,fontupper=\ttfamily\footnotesize\color{manualink}]%
+	{#1}}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SPEC TABLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewEnviron{spectable}[1][]{%
+	\par\vspace{0.4em}%
+	\def\manual@spectitle{#1}%
+	\ifx\manual@spectitle\empty\else
+	{\sffamily\bfseries\footnotesize\color{manualgrey}%
+		\MakeUppercase{#1}}\par\vspace{0.2em}%
+	\fi
+	\renewcommand{\arraystretch}{1.35}%
+	\arrayrulecolor{manualaccent}%
+	\begin{tabularx}{\linewidth}{%
+			>{\columncolor{manualaccentpale}\bfseries\color{manualaccentdark}}p{0.34\linewidth}%
+			>{\columncolor{manualaccentpale}\color{manualink}}X}
+		\specialrule{2pt}{0pt}{0pt}
+		\BODY
+		\specialrule{2pt}{0pt}{0pt}
+	\end{tabularx}%
+	\arrayrulecolor{black}\par\vspace{0.2em}%
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MISC HELPERS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\kv}[2]{{\color{manualaccentdark}\textbf{#1:}}~#2\quad}
+\renewcommand{\contentsname}{Contents}
+
+\endinput

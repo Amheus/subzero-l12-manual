@@ -1,0 +1,77 @@
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{dspgraph}[2026/06/28 v1.0 DSP-mode response graphs]
+
+\RequirePackage{iftex}
+\RequireLuaTeX
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\RequirePackage{kvoptions}
+\SetupKeyvalOptions{family=dspgraph,prefix=dspgraph@}
+\DeclareStringOption[en-GB]{locale}
+\ProcessKeyvalOptions*
+
+\directlua{
+	json = dofile("lua/json.lua")
+	dspgraph = dofile("lua/dspgraph.lua")
+	dspgraph.locale = "\dspgraph@locale"
+	dspgraph.load("json/dsp-modes.json")
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plot
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pgfplotsset{
+	dspcurve/.style={draw=manualaccent, line width=1.3pt, mark=none},
+	dspzero/.style={draw=manualgrey!70, dashed, line width=0.5pt, mark=none, forget plot},
+}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End-facing macros
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\dspgraph}[1]{%
+	\par\medskip
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis}[
+					width=\linewidth,
+					height=0.58\linewidth,
+					xmode=log,
+					log basis
+					x=10,
+					xmin=20,
+					xmax=20000,
+					ymin=-15,
+					ymax=15,
+					xtick={20,50,100,200,500,1000,2000,5000,10000,20000},
+					xticklabels={20,50,100,200,500,1k,2k,5k,10k,20k},
+					ytick={-12,-6,0,6,12},
+					grid=both,
+					major grid style={line width=0.2pt, draw=manualrule},
+					minor grid style={line width=0.2pt, draw=manualrule!55},
+					axis line style={draw=manualgrey!80},
+					tick style={draw=manualgrey!80},
+					xlabel={Frequency (Hz)}, ylabel={Gain (dB)},
+					label style={font=\footnotesize, color=manualink},
+					tick label style={font=\scriptsize, color=manualgrey},
+					enlarge x limits=false, clip=false,
+				]
+				\directlua{dspgraph.plot("#1")}
+			\end{axis}
+		\end{tikzpicture}%
+	\end{center}%
+	\par\medskip
+}
+\newcommand{\dsplabel}[1]{\csname dsp@label@#1\endcsname}
+
+\endinput

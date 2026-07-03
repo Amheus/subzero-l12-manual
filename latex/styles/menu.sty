@@ -1,0 +1,99 @@
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{menu}[2026/06/28 v1.0 L12 menu and controls renderer]
+
+\RequirePackage{iftex}
+\RequireLuaTeX
+\RequirePackage{kvoptions}
+\SetupKeyvalOptions{family=menu,prefix=menu@}
+\DeclareStringOption[en-GB]{locale}
+\ProcessKeyvalOptions*
+
+\directlua{
+	if not json then json = dofile("lua/json.lua") end
+
+	menu = dofile("lua/menu.lua")
+	menu.locale = "\menu@locale"
+	menu.load_menu("json/menu.json")
+	menu.load_bands("json/eq-bands.json")
+	menu.load_controls("json/controls.json")
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% STYLING
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newlength{\dspmenuoptw}\setlength{\dspmenuoptw}{0.34\linewidth}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Intro: entry line + navigation line.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\dspmenuintro}[2]{%
+	#1\par\smallskip
+	{\color{manualink}#2}\par
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Screen / page separator.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\dspmenupage}[1]{%
+	\par\addvspace{9pt}%
+	{\small\bfseries\color{manualaccent}\MakeUppercase{Page #1}}\par
+	\vspace{1.5pt}{\color{manualrule}\hrule height 0.4pt}\vspace{3pt}%
+}
+
+\newcommand{\dspmenuitem}[2]{%
+	\par\addvspace{2.5pt}%
+	\noindent\makebox[\dspmenuoptw][l]{\textbf{\color{manualink}#1}}%
+	{\footnotesize\color{manualaccentdark}#2}\par
+}
+\newcommand{\dspmenuitemdesc}[3]{%
+	\dspmenuitem{#1}{#2}%
+	{\leftskip\dspmenuoptw\footnotesize\color{manualgrey}#3\par}%
+}
+
+\newcommand{\menusubhead}[1]{%
+	\par\addvspace{9pt}{\large\bfseries\color{manualaccentdark}#1}\par\vspace{2pt}%
+}
+\newcommand{\menuaccess}[1]{{\itshape\color{manualink}#1}\par\smallskip}
+
+\newenvironment{eqbandtabular}{%
+	\par\smallskip
+	\renewcommand{\arraystretch}{1.25}%
+	\begin{tabular}{@{}c >{\raggedright\arraybackslash}p{0.56\linewidth} l@{}}
+		\toprule
+		\textbf{\color{manualaccentdark}Band} &
+		\textbf{\color{manualaccentdark}Centre frequency} &
+		\textbf{\color{manualaccentdark}Default}\\
+		\midrule
+	}{%
+		\bottomrule
+	\end{tabular}\par
+}
+\newcommand{\eqgainnote}[2]{%
+	\par\smallskip{\footnotesize All bands share a gain range of #1, in #2\,dB steps.}\par
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End-facing macros
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\dspmenu}{\directlua{menu.render()}}
+\newcommand{\eqbandtable}{\directlua{menu.render_bands()}}
+\newcommand{\controlsref}{\directlua{menu.render_controls()}}
+
+\endinput
