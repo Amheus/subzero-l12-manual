@@ -1,0 +1,76 @@
+{
+    "mic_effect": {
+        "name": "Mic Effect",
+        "screen_label": "MIC EFFECT",
+        "access": {
+            "en-GB": "Turn the \"ECHO\" or \"REVERB\" dial to open this menu."
+        },
+        "params": [
+            {
+                "key": "echo",
+                "name": "Echo",
+                "type": "range",
+                "off": true,
+                "min": 13,
+                "max": 400,
+                "step": 13,
+                "unit": "ms"
+            },
+            {
+                "key": "reverb",
+                "name": "Reverb",
+                "type": "range",
+                "off": true,
+                "min": 2,
+                "max": 60,
+                "step": 2,
+                "unit": "%"
+            }
+        ]
+    },
+    "guitar_fx": {
+        "name": "Guitar Effects",
+        "type": "enum",
+        "access": {
+            "en-GB": "Rotary encoder: rotate to highlight an option, then click to select it."
+        },
+        "values": [
+            "OFF",
+            "CHORUS",
+            "AUTO-WAH",
+            "DELAY",
+            "FLANGER",
+            "OVERDRIVE",
+            "DISTORTION"
+        ]
+    },
+    "tone": {
+        "name": "Tone",
+        "params": [
+            {
+                "key": "bass",
+                "name": "Bass",
+                "type": "range",
+                "freq": 150,
+                "frequencyUnit": "Hz",
+                "min": -12,
+                "max": 6,
+                "step": 1,
+                "unit": "dB",
+                "boardMisprint": "6dB to +6dB"
+            },
+            {
+                "key": "treble",
+                "name": "Treble",
+                "type": "range",
+                "freq": 8000,
+                "frequencyUnit": "Hz",
+                "min": -12,
+                "max": 6,
+                "step": 1,
+                "unit": "dB",
+                "boardMisprint": "6dB to +6dB"
+            }
+        ]
+    }
+}

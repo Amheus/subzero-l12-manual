@@ -1,0 +1,146 @@
+{
+    "entry": {
+        "en-GB": "Press the DSP encoder to open the menu."
+    },
+    "navigation": {
+        "en-GB": "Rotate the DSP encoder to navigate up and down through the list, then click it to select an item.  The list does not wrap (it stops at the top and bottom rather than cycling around)."
+    },
+    "pages": [
+        {
+            "page": 1,
+            "items": [
+                {
+                    "key": "exit",
+                    "name": "EXIT",
+                    "type": "action"
+                },
+                {
+                    "key": "music_eq",
+                    "name": "MUSIC EQ",
+                    "type": "enum",
+                    "values": [
+                        "FLAT",
+                        "MUSIC",
+                        "LIVE",
+                        "SPEECH",
+                        "5 BAND"
+                    ],
+                    "description": {
+                        "en-GB": ""
+                    }
+                },
+                {
+                    "key": "boost",
+                    "name": "BOOST",
+                    "type": "enum",
+                    "values": [
+                        "On",
+                        "80 Hz",
+                        "100 Hz",
+                        "120 Hz"
+                    ],
+                    "description": {
+                        "en-GB": ""
+                    }
+                },
+                {
+                    "key": "mic_eq",
+                    "name": "MIC EQ",
+                    "type": "submenu",
+                    "submenu": "mic_eq",
+                    "description": {
+                        "en-GB": ""
+                    }
+                }
+            ]
+        },
+        {
+            "page": 2,
+            "items": [
+                {
+                    "key": "mic_first",
+                    "name": "MIC FIRST",
+                    "type": "enum",
+                    "values": [
+                        "On",
+                        "Off"
+                    ],
+                    "description": {
+                        "en-GB": ""
+                    }
+                },
+                {
+                    "key": "vocal_cut",
+                    "name": "VOCAL CUT",
+                    "type": "enum",
+                    "values": [
+                        "On",
+                        "Off"
+                    ],
+                    "description": {
+                        "en-GB": ""
+                    }
+                },
+                {
+                    "key": "bright",
+                    "name": "BRIGHT",
+                    "type": "range",
+                    "min": 1,
+                    "max": 10,
+                    "step": 1,
+                    "description": {
+                        "en-GB": "Sets the LCD backlight brightness."
+                    }
+                },
+                {
+                    "key": "contrast",
+                    "name": "CONTRAST",
+                    "type": "range",
+                    "min": 1,
+                    "max": 10,
+                    "step": 1,
+                    "description": {
+                        "en-GB": "Sets the LCD display contrast."
+                    }
+                }
+            ]
+        },
+        {
+            "page": 3,
+            "items": [
+                {
+                    "key": "language",
+                    "name": "LANGUAGE",
+                    "type": "enum",
+                    "values": [
+                        "English",
+                        "Español"
+                    ],
+                    "description": {
+                        "en-GB": ""
+                    }
+                },
+                {
+                    "key": "reset",
+                    "name": "RESET",
+                    "type": "action",
+                    "description": {
+                        "en-GB": ""
+                    }
+                },
+                {
+                    "key": "exit",
+                    "name": "EXIT",
+                    "type": "action"
+                }
+            ]
+        }
+    ],
+    "submenus": {
+        "mic_eq": {
+            "name": "MIC EQ",
+            "type": "param_eq",
+            "bandsRef": "eq-bands"
+        }
+    }
+}
