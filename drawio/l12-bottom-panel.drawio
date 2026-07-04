@@ -1,0 +1,145 @@
+<mxfile host="Electron" modified="2026-07-04T11:46:28.903Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="o__ysjRlvf3kFhqxkBJ5" version="22.1.16" type="device">
+  <diagram name="Page-1" id="ob8gZVQCK6kY2yueRQ7d">
+    <mxGraphModel dx="3354" dy="1916" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="2450" height="3900" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-6" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="260" width="70" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-8" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="420" y="260" width="70" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-10" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="680" y="250" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-11" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="950" y="190" width="290" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-12" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="1300" y="190" width="290" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-13" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="1690" y="250" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-14" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="2020" y="250" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-15" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="2370" y="305" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-25" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1910" y="3410" width="250" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-26" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1600" y="3450" width="210" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-27" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="3560" width="500" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-28" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;MIC INPUT&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="950" y="520" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-29" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;MIC INPUT&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="1300" y="520" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-30" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;GUITAR&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="1630" y="520" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-31" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;LINE&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="1960" y="520" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-32" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;AUX&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="2250" y="520" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-33" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;PASS THRU&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="620" y="480" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-34" value="&lt;span style=&quot;font-size: 25px;&quot;&gt;CHANNEL 1&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="950" y="600" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-35" value="&lt;span style=&quot;font-size: 25px;&quot;&gt;CHANNEL 2&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="1300" y="600" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-36" value="&lt;span style=&quot;font-size: 25px;&quot;&gt;CHANNEL 3&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="1630" y="600" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-37" value="&lt;span style=&quot;font-size: 25px;&quot;&gt;CHANNEL 4&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="1960" y="600" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-40" value="&lt;span style=&quot;font-size: 25px;&quot;&gt;CHANNEL 5&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="2250" y="600" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-41" value="&lt;span style=&quot;font-size: 25px;&quot;&gt;VOLTAGE SELECTOR&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="1105" y="3490" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-44" value="&lt;span style=&quot;font-size: 25px;&quot;&gt;AC INPUT&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="1890" y="3350" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-45" value="&lt;span style=&quot;font-size: 25px;&quot;&gt;230V&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Atkinson Hyperlegible Next;fontColor=default;rotation=90;" parent="1" vertex="1">
+          <mxGeometry x="1380" y="3595" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-46" value="&lt;span style=&quot;font-size: 25px;&quot;&gt;110V&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Atkinson Hyperlegible Next;fontColor=default;rotation=-90;" parent="1" vertex="1">
+          <mxGeometry x="830" y="3595" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-47" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=default;strokeWidth=5;dashed=1;dashPattern=1 2;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="260" y="240" width="250" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-48" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=default;strokeWidth=5;dashed=1;dashPattern=1 2;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="660" y="230" width="210" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-50" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=default;strokeWidth=5;dashed=1;dashPattern=1 2;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="930" y="170" width="680" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-51" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=default;strokeWidth=5;dashed=1;dashPattern=1 2;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="1670" y="230" width="210" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-52" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=default;strokeWidth=5;dashed=1;dashPattern=1 2;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="2000" y="230" width="210" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-54" value="01" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=50;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="200" y="180" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-55" value="02" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=50;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="600" y="170" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-56" value="03" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=50;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="880" y="120" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-57" value="04" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=50;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="1860" y="170" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-58" value="05" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=50;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="2190" y="170" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-59" value="06" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=50;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="2290" y="220" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-60" value="07" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=50;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="890" y="3410" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-61" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=default;strokeWidth=5;dashed=1;dashPattern=1 2;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="950" y="3470" width="600" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-63" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=default;strokeWidth=5;dashed=1;dashPattern=1 2;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="1580" y="3430" width="250" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-64" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=default;strokeWidth=5;dashed=1;dashPattern=1 2;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="1880" y="3340" width="310" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-65" value="08" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=50;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="1520" y="3370" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6WbowFdNZPQuGmxbeWIH-66" value="09" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=50;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" parent="1" vertex="1">
+          <mxGeometry x="1820" y="3280" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zPZKtmWMC9bkiagA_7lD-1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=default;strokeWidth=5;dashed=1;dashPattern=1 2;fontFamily=Atkinson Hyperlegible Next;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="2350" y="280" width="90" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
