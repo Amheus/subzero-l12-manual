@@ -1,0 +1,113 @@
+{
+    "topPanel": [
+        {
+            "id": 1,
+            "label": {
+                "en-GB": "LCD Display"
+            },
+            "description": {
+                "en-GB": "This display shows menus, EQ curves, and more."
+            }
+        },
+        {
+            "id": 2,
+            "label": {
+                "en-GB": "Navigation Knob"
+            },
+            "description": {
+                "en-GB": "This is the primary way to interact with the L12's menu system."
+            }
+        },
+        {
+            "id": 3,
+            "label": {
+                "en-GB": "Echo Knob"
+            },
+            "description": {
+                "en-GB": "This is used to modify the delay time on the \"Echo\" effect on channels one and two."
+            }
+        },
+        {
+            "id": 4,
+            "label": {
+                "en-GB": "Reverb Knob"
+            },
+            "description": {
+                "en-GB": "This is used to modify the wet signal from the \"Reverb\" effect on channels one and two."
+            }
+        },
+        {
+            "id": 5,
+            "label": {
+                "en-GB": "Guitar Effects Knob"
+            },
+            "description": {
+                "en-GB": "This knob is used to search through various effects, click the knob to select the highlighted effect."
+            }
+        },
+        {
+            "id": 6,
+            "label": {
+                "en-GB": "Bass and Treble EQ Knobs"
+            },
+            "description": {
+                "en-GB": "This knob is used to adjust the levels of \"bass\" and \"treble\" on the master channel."
+            }
+        },
+        {
+            "id": 7,
+            "label": {
+                "en-GB": "Gain Knobs"
+            },
+            "description": {
+                "en-GB": "These knobs are used to control the gain signal level on the input of channels one through three."
+            }
+        },
+        {
+            "id": 8,
+            "label": {
+                "en-GB": "Level Knobs"
+            },
+            "description": {
+                "en-GB": "These knobs are used to control the output level of channels four and five."
+            }
+        },
+        {
+            "id": 9,
+            "label": {
+                "en-GB": "Media Control Buttons"
+            },
+            "description": {
+                "en-GB": "These buttons are used to navigate and play files off a USB stick or Bluetooth-connected device."
+            }
+        },
+        {
+            "id": 10,
+            "label": {
+                "en-GB": "TWS Button"
+            },
+            "description": {
+                "en-GB": "This button is used for pairing one L12 with another L12."
+            }
+        },
+        {
+            "id": 11,
+            "label": {
+                "en-GB": "Limiter LED"
+            },
+            "description": {
+                "en-GB": "This LED will light up when the L12 is limiting the output, to mitigate distortion and protect itself."
+            }
+        },
+        {
+            "id": 12,
+            "label": {
+                "en-GB": "Signal LEDs"
+            },
+            "description": {
+                "en-GB": "These LEDs will light up when an audio source is providing audio at an adequate level on the corresponding channel."
+            }
+        }
+    ],
+    "bottomPanel": []
+}

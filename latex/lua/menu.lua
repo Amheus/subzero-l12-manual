@@ -27,6 +27,7 @@ end
 function Menu.load_menu(path)       Menu.menu = decode(path) end
 function Menu.load_bands(path)      Menu.bands = decode(path) end
 function Menu.load_controls(path)   Menu.controls = decode(path) end
+function Menu.load_panel(path)      Menu.panel = decode(path) end
 
 local function format_frequency(hertz)
     if hertz >= 1000 then
@@ -152,6 +153,15 @@ function Menu.render_controls()
     tex.sprint("\\begin{caution}")
     tex.sprint("The control board prints the Bass and Treble lower limit as \"" .. misprint_param.boardMisprint .. "\". The actual range is " .. db_range(misprint_param.min, misprint_param.max) .. ".")
     tex.sprint("\\end{caution}")
+end
+
+function Menu.render_panel()
+    local panel_data = Menu.panel
+    tex.sprint("\\begin{panellegendtabular}")
+    for _, feature in ipairs(panel_data.topPanel) do
+        tex.sprint(string.format("\\panelnum{%d} & %s & %s\\\\", feature.id, localise(feature.label), localise(feature.description)))
+    end
+    tex.sprint("\\end{panellegendtabular}")
 end
 
 return Menu

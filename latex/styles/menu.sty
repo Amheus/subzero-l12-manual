@@ -4,6 +4,8 @@
 
 \RequirePackage{iftex}
 \RequireLuaTeX
+\RequirePackage{tikz}
+\RequirePackage{longtable}
 \RequirePackage{kvoptions}
 \SetupKeyvalOptions{family=menu,prefix=menu@}
 \DeclareStringOption[en-GB]{locale}
@@ -17,6 +19,7 @@
 	menu.load_menu("json/menu.json")
 	menu.load_bands("json/eq-bands.json")
 	menu.load_controls("json/controls.json")
+	menu.load_panel("json/physical-functions.json")
 }
 
 
@@ -58,6 +61,7 @@
 	\noindent\makebox[\dspmenuoptw][l]{\textbf{\color{manualink}#1}}%
 	{\footnotesize\color{manualaccentdark}#2}\par
 }
+
 \newcommand{\dspmenuitemdesc}[3]{%
 	\dspmenuitem{#1}{#2}%
 	{\leftskip\dspmenuoptw\footnotesize\color{manualgrey}#3\par}%
@@ -66,6 +70,7 @@
 \newcommand{\menusubhead}[1]{%
 	\par\addvspace{9pt}{\large\bfseries\color{manualaccentdark}#1}\par\vspace{2pt}%
 }
+
 \newcommand{\menuaccess}[1]{{\itshape\color{manualink}#1}\par\smallskip}
 
 \newenvironment{eqbandtabular}{%
@@ -77,12 +82,37 @@
 		\textbf{\color{manualaccentdark}Centre frequency} &
 		\textbf{\color{manualaccentdark}Default}\\
 		\midrule
-	}{%
-		\bottomrule
+}{%
+    \bottomrule
 	\end{tabular}\par
 }
+
 \newcommand{\eqgainnote}[2]{%
 	\par\smallskip{\footnotesize All bands share a gain range of #1, in #2\,dB steps.}\par
+}
+
+\newcommand{\panelnum}[1]{%
+	\tikz[baseline=(panelbadge.base)]{%
+		\node[circle, fill=manualaccent, text=white, inner sep=0pt, minimum size=1.6em, font=\footnotesize\bfseries]
+		(panelbadge) {#1};
+	}%
+}
+
+\newenvironment{panellegendtabular}{%
+	\par\smallskip
+	\renewcommand{\arraystretch}{1.4}%
+	\begin{longtable}{@{}c@{\hspace{0.9em}}%
+		>{\raggedright\arraybackslash}p{0.30\linewidth}%
+		>{\raggedright\arraybackslash}p{0.50\linewidth}@{}}
+    \toprule
+    & \textbf{\color{manualaccentdark}Feature} &
+		\textbf{\color{manualaccentdark}Function}\\
+    \midrule
+    \endhead
+    \bottomrule
+    \endlastfoot
+}{%
+	\end{longtable}\par
 }
 
 
@@ -95,5 +125,6 @@
 \newcommand{\dspmenu}{\directlua{menu.render()}}
 \newcommand{\eqbandtable}{\directlua{menu.render_bands()}}
 \newcommand{\controlsref}{\directlua{menu.render_controls()}}
+\newcommand{\panellegend}{\directlua{menu.render_panel()}}
 
 \endinput
