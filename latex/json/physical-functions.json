@@ -109,5 +109,87 @@
             }
         }
     ],
-    "bottomPanel": []
+    "bottomPanel": [
+        {
+            "id": 1,
+            "label": {
+                "en-GB": "USB Ports"
+            },
+            "description": {
+                "en-GB": ""
+            }
+        },
+        {
+            "id": 2,
+            "label": {
+                "en-GB": "Pass Through"
+            },
+            "description": {
+                "en-GB": ""
+            }
+        },
+        {
+            "id": 3,
+            "label": {
+                "en-GB": "Mic Inputs"
+            },
+            "description": {
+                "en-GB": ""
+            }
+        },
+        {
+            "id": 4,
+            "label": {
+                "en-GB": "Guitar Input"
+            },
+            "description": {
+                "en-GB": ""
+            }
+        },
+        {
+            "id": 5,
+            "label": {
+                "en-GB": "Line Input"
+            },
+            "description": {
+                "en-GB": ""
+            }
+        },
+        {
+            "id": 6,
+            "label": {
+                "en-GB": "Aux Input"
+            },
+            "description": {
+                "en-GB": ""
+            }
+        },
+        {
+            "id": 7,
+            "label": {
+                "en-GB": "Voltage Selector"
+            },
+            "description": {
+                "en-GB": ""
+            }
+        },
+        {
+            "id": 8,
+            "label": {
+                "en-GB": "Power Switch"
+            },
+            "description": {
+                "en-GB": ""
+            }
+        },
+        {
+            "id": 9,
+            "label": {
+                "en-GB": "AC Input"
+            },
+            "description": {
+                "en-GB": ""
+            }
+        }
+    ]
 }

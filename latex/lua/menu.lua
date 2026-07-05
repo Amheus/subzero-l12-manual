@@ -155,12 +155,20 @@ function Menu.render_controls()
     tex.sprint("\\end{caution}")
 end
 
-function Menu.render_panel()
+function Menu.render_panel(panelName)
     local panel_data = Menu.panel
     tex.sprint("\\begin{panellegendtabular}")
-    for _, feature in ipairs(panel_data.topPanel) do
-        tex.sprint(string.format("\\panelnum{%d} & %s & %s\\\\", feature.id, localise(feature.label), localise(feature.description)))
+
+    if panelName == "topPanel" then
+        for _, feature in ipairs(panel_data.topPanel) do
+            tex.sprint(string.format("\\panelnum{%d} & %s & %s\\\\", feature.id, localise(feature.label), localise(feature.description)))
+        end
+    else
+        for _, feature in ipairs(panel_data.bottomPanel) do
+            tex.sprint(string.format("\\panelnum{%d} & %s & %s\\\\", feature.id, localise(feature.label), localise(feature.description)))
+        end
     end
+
     tex.sprint("\\end{panellegendtabular}")
 end
 
