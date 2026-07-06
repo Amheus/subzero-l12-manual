@@ -113,82 +113,91 @@
         {
             "id": 1,
             "label": {
-                "en-GB": "USB Ports"
+                "en-GB": "USB Port - Charging"
             },
             "description": {
-                "en-GB": ""
+                "en-GB": "This USB port is for charging devices."
             }
         },
         {
             "id": 2,
             "label": {
-                "en-GB": "Pass Through"
+                "en-GB": "USB Port - Media"
             },
             "description": {
-                "en-GB": ""
+                "en-GB": "This USB port is used for playing media off a USB stick or similar media."
             }
         },
         {
             "id": 3,
             "label": {
-                "en-GB": "Mic Inputs"
+                "en-GB": "Pass Through"
             },
             "description": {
-                "en-GB": ""
+                "en-GB": "This \"passes through\" the master audio signal so you can daisy chain another L12 off it."
             }
         },
         {
             "id": 4,
             "label": {
-                "en-GB": "Guitar Input"
+                "en-GB": "Combi-XLR/Jack Inputs"
             },
             "description": {
-                "en-GB": ""
+                "en-GB": "These are for plugging in a microphone (note: the L12 does NOT supply phantom power on these ports), or other balanced signal, for example, a feed from a mixing desk."
             }
         },
         {
             "id": 5,
             "label": {
-                "en-GB": "Line Input"
+                "en-GB": "Guitar Input"
             },
             "description": {
-                "en-GB": ""
+                "en-GB": "This input is for connecting an instrument (such as a guitar) to the L12, giving you access to the L12's built-in DSP effects."
             }
         },
         {
             "id": 6,
             "label": {
-                "en-GB": "Aux Input"
+                "en-GB": "Line Input"
             },
             "description": {
-                "en-GB": ""
+                "en-GB": "This input is used for connecting a device at \"line level\" to the L12, examples include computers, electric pianos, and more."
             }
         },
         {
             "id": 7,
             "label": {
-                "en-GB": "Voltage Selector"
+                "en-GB": "Aux Input"
             },
             "description": {
-                "en-GB": ""
+                "en-GB": "This input is used for connecting laptops, smartphones, etc..."
             }
         },
         {
             "id": 8,
             "label": {
-                "en-GB": "Power Switch"
+                "en-GB": "Voltage Selector"
             },
             "description": {
-                "en-GB": ""
+                "en-GB": "Please ensure this switch is set appropriate to the region you are operating the L12 at.  Options are 110V and 240V.  Incorrect setting can cause damage to the L12."
             }
         },
         {
             "id": 9,
             "label": {
+                "en-GB": "Power Switch"
+            },
+            "description": {
+                "en-GB": "Turns the L12 on and off, please ensure that the \"Voltage Selector\" is set to the correct voltage before supplying power."
+            }
+        },
+        {
+            "id": 10,
+            "label": {
                 "en-GB": "AC Input"
             },
             "description": {
-                "en-GB": ""
+                "en-GB": "This is where you supply power to the L12, please ensure that the \"Voltage Selector\" is set to the correct voltage before supplying power."
             }
         }
     ]
