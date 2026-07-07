@@ -1,0 +1,69 @@
+{
+    "amplifier": {
+        "inputs": {
+            "xlr": 2,
+            "line": 2,
+            "otherInputs": [
+                "Stereo 3.5mm Jack"
+            ],
+            "powerOutputRMS": 700,
+            "impedanceOhms": 4,
+            "mediaPlayer": [
+                "USB",
+                "Bluetooth"
+            ]
+        }
+    },
+    "speakers": {
+        "sub": {
+            "rmsPowerOutputW": 500,
+            "frequencyResponseHz": {
+                "low": 30,
+                "high": 150
+            },
+            "sensitivity": "96dB/1W@1M",
+            "speakerSizes": [
+                {
+                    "name": "Bass Reflex Subwoofer",
+                    "sizeInches": 12,
+                    "quantity": 1
+                },
+                {
+                    "name": "Voice Coil",
+                    "sizeInches": 2.5,
+                    "quantity": 1
+                }
+            ],
+            "material": {
+                "cabinet": "ABS",
+                "grille": "Steel"
+            },
+            "powerConsumptionW": null
+        },
+        "columns": {
+            "rmsPowerOutputW": 200,
+            "frequencyResponseHz": {
+                "low": 150,
+                "high": 180000
+            },
+            "sensitivity": "98dB/1W@1M",
+            "speakerSizes": [
+                {
+                    "name": "Woofer",
+                    "sizeInches": 2.5,
+                    "quantity": 12
+                },
+                {
+                    "name": "Voice Coil",
+                    "sizeInches": 0.8,
+                    "quantity": 12
+                }
+            ],
+            "material": {
+                "cabinet": "ABS",
+                "grille": "Steel"
+            },
+            "powerConsumptionW": 150
+        }
+    }
+}
